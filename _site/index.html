@@ -7,11 +7,13 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Verifiable Timed Signatures" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Verifiable Timed Signatures" />
 <script type="application/ld+json">
-{"headline":"Verifiable Timed Signatures","url":"/","@type":"WebSite","name":"Verifiable Timed Signatures","@context":"https://schema.org"}</script>
+{"headline":"Verifiable Timed Signatures","url":"http://localhost:4000/","@type":"WebSite","name":"Verifiable Timed Signatures","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Verifiable Timed Signatures" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Verifiable Timed Signatures" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Verifiable Timed Signatures</a><nav class="site-nav">
@@ -29,9 +31,32 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h2 id="about">About</h2>
+        <div class="home"><h1 id="verifiable-timed-signatures">Verifiable Timed Signatures</h1>
 
-<p>Hi. This webpage contains resources related to verifiable timed signatures project.</p>
+<h2 id="about">About</h2>
+
+<p>Verifiable Timed Signature (VTS) scheme allows one to time-lock a signature on a
+known message for a given amount of time <em>T</em> such that after performing a sequential
+computation for time <em>T</em> anyone can extract the signature from the time-lock.
+<em>Verifiability</em> ensures that anyone can publicly check if a time-lock contains
+a valid signature on the message without solving it first, and that the signature
+can be obtained by solving the same for time <em>T</em>. This work formalizes VTS, presents
+efficient constructions compatible with BLS, Schnorr, and ECDSA signatures, and
+experimentally demonstrates that these constructions can be employed
+in practice. On a technical level, we design an efficient cut-and-choose protocol
+based on the homomorphic time-lock puzzles to prove the validity of a signature
+encapsulated in a time-lock puzzle. We also present a new efficient range
+proof protocol that significantly improves upon existing proposals in terms of
+the proof size, and is also of independent interest. While VTS is a versatile tool
+with numerous existing applications, we demonstrate VTS’s applicability to
+resolve three novel challenging issues in the space of cryptocurrencies.
+Specifically,we show how VTS is the cryptographic cornerstone to construct:</p>
+<ol>
+  <li>Payment channel networks with improved on-chain unlinkability of users involved
+in a transaction</li>
+  <li>Multi-party signing of transactions for cryptocurrencies without any on-chain notion of time</li>
+  <li>Cryptocurrency-enabled fair multi-party computation protocol.</li>
+</ol>
 
 <h2 id="resources">Resources</h2>
 
