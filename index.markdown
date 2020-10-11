@@ -23,7 +23,7 @@ proof protocol that significantly improves upon existing proposals in terms of
 the proof size, and is also of independent interest. While VTS is a versatile tool
 with numerous existing applications, we demonstrate VTS’s applicability to
 resolve three novel challenging issues in the space of cryptocurrencies.
-Specifically,we show how VTS is the cryptographic cornerstone to construct: 
+Specifically, we show how VTS is the cryptographic cornerstone to construct: 
 1. Payment channel networks with improved on-chain unlinkability of users involved
 in a transaction 
 2. Multi-party signing of transactions for cryptocurrencies without any on-chain notion of time 
@@ -31,5 +31,5 @@ in a transaction
 
 ## Resources
 
-- [Full Paper]()
+- [Full Paper](/assets/paper.pdf)
 - [Linearly Homomorphic Time Lock Puzzle C library](https://github.com/verifiable-timed-signatures/liblhtlp)
