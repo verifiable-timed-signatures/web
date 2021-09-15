@@ -2,16 +2,27 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Verifiable Timed Signatures</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Verifiable Timed Signatures" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="Verifiable Timed Signatures" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Verifiable Timed Signatures" />
 <script type="application/ld+json">
-{"url":"/","@type":"WebSite","headline":"Verifiable Timed Signatures","name":"Verifiable Timed Signatures","@context":"https://schema.org"}</script>
+{"headline":"Verifiable Timed Signatures","@type":"WebSite","url":"/","name":"Verifiable Timed Signatures","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Verifiable Timed Signatures" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Verifiable Timed Signatures" /><!-- for mathjax support -->
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+  <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Verifiable Timed Signatures</a><nav class="site-nav">
@@ -54,10 +65,25 @@ in a transaction</li>
   <li>Cryptocurrency-enabled fair multi-party computation protocol.</li>
 </ol>
 
+<h2 id="opensquare-decentralized-puzzle-solving">OpenSquare: Decentralized Puzzle Solving</h2>
+
+<p>Repeated Modular Squaring is a versatile computational operation that has led to practical constructions of timed-cryptographic primitives like time-lock puzzles (TLP) and verifiable delay functions (VDF) that have a fast growing list of applications. While there is a huge interest for timed-cryptographic primitives in the blockchains area, we find two real-world concerns that need immediate attention towards their large-scale practical adoption: Firstly, the requirement to constantly perform computations seems unrealistic for most of the users. Secondly, choosing the parameters for the bound \(\mathbf{T}\) seems complicated due to the lack of heuristics and experience.</p>
+
+<p>We present OpenSquare, a decentralized repeated modular squaring service, 
+that overcomes the above concerns.
+OpenSquare lets clients outsource their repeated modular squaring computation via smart contracts to any computationally powerful servers that offer computational services for rewards in an unlinkable manner.</p>
+
+<p>OpenSquare naturally gives us publicly computable heuristics about a pre-specified number (\(\mathbf{T}\)) and the corresponding reward amounts of repeated squarings necessary for a time period. 
+Moreover, OpenSquare rewards multiple servers for a single request, in a sybil resistant manner to incentivise maximum server participation and is therefore resistant to censorship and single-points-of failures.
+We give game-theoretic analysis to support the mechanism design of OpenSquare: (1) incentivises servers to stay available with their services, (2) minimizes the cost of outsourcing for the client, and (3) ensures the client receives the valid computational result with high probability.
+To demonstrate practicality, we also implement OpenSquare’s smart contract in Solidity and report the gas costs for all of its functions. 
+Our results show that the on-chain computational costs for both the clients and the servers are quite low, and therefore feasible for practical deployments and usage.</p>
+
 <h2 id="resources">Resources</h2>
 
 <ul>
-  <li><a href="/assets/paper.pdf">Full Paper</a></li>
+  <li><a href="https://eprint.iacr.org/2020/1563.pdf">VTS Paper</a></li>
+  <li><a href="/assets/opensquare.pdf">OpenSquare Paper</a></li>
   <li><a href="https://github.com/verifiable-timed-signatures/liblhtlp">Linearly Homomorphic Time Lock Puzzle C library</a></li>
 </ul>
 </div>
